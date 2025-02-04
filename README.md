@@ -1,4 +1,76 @@
-<header>
+<header><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #d6336c;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes-btn {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .no-btn {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Para: Mi Muñequita Hermosha</h1>
+        <p>¿Quieres ser mi San Valentín?</p>
+        <div class="buttons">
+            <button class="btn yes-btn" onclick="alert('¡Sabía que dirías que sí! 💖')">Sí</button>
+            <button class="btn no-btn" id="noBtn">No</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("noBtn").addEventListener("mouseover", function() {
+            let x = Math.random() * window.innerWidth - 100;
+            let y = Math.random() * window.innerHeight - 50;
+            this.style.left = x + "px";
+            this.style.top = y + "px";
+        });
+    </script>
+
+</body>
+</html>
+
 
 <!--
   <<< Author notes: Course header >>>
